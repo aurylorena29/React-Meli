@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as var;
+
+@font-face {
+  font-family: var.$font-name;
+  src: url("../../fonts/NeueHaasDisplayThin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: var.$font-regular-name;
+  src: url("../../fonts/NeueHaasDisplayLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: var.$font-medium-name;
+  src: url("../../fonts/NeueHaasDisplayMediu.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: var.$font-bold-name;
+  src: url("../../fonts/NeueHaasDisplayBold.ttf") format("truetype");
+}

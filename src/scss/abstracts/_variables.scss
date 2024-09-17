@@ -1,0 +1,25 @@
+/******    Colors    *******/
+$color-white: #fff;
+$color-black: #000;
+$color-black-light: #333;
+$color-black-light-2: #666;
+$color-gray: #999;
+$color-gray-light: #EEE;
+$color-yellow: #FFE600;
+$color-blue: #3483FA;
+
+$primary-color: $color-yellow;
+$secondary-color: $color-black-light;
+
+
+/******    Fonts    *******/
+$font-name: "NeueHaasDisplayThin";
+$font-regular-name: "NeueHaasDisplayLight";
+$font-medium-name: "NeueHaasDisplayMedium";
+$font-bold-name: "NeueHaasDisplayBold";
+
+$font: $font-name, Arial, Helvetica, sans-serif;
+$font-text: $font-regular-name, Arial, Helvetica, sans-serif;
+$font-title: $font-bold-name, Arial, Helvetica, sans-serif;
+
+

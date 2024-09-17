@@ -1,0 +1,13 @@
+// abstracts
+@use "./scss/abstracts/variables" as var;
+
+// base
+@use "./scss/base/reset";
+@use "./scss/base/typography";
+
+
+
+.title{
+    font-family: var.$font-name;
+    font-size: 2rem;
+}
