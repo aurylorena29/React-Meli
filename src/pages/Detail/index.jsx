@@ -1,16 +1,17 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Layout from '../Layout';
 
 const Detail = () => {
-  const { id } = useParams(); // Obtener el ID del producto desde la URL
-
-  // Aquí iría la lógica para obtener los detalles del producto usando `id`
+  const { id } = useParams(); 
 
   return (
-    <div>
-      <h1>Detalle del producto {id}</h1>
-      {/* Mostrar los detalles del producto aquí */}
-    </div>
+    <Layout>
+      <div>
+        <h1>Detalle del producto {id}</h1>
+        
+      </div>
+    </Layout>
   );
 };
 

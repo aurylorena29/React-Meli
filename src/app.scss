@@ -1,3 +1,4 @@
+
 // abstracts
 @use "./scss/abstracts/variables" as var;
 
@@ -5,9 +6,5 @@
 @use "./scss/base/reset";
 @use "./scss/base/typography";
 
-
-
-.title{
-    font-family: var.$font-name;
-    font-size: 2rem;
-}
+// Bootstrap grid CSS 
+@import "./scss/base/bootstrap-grid.min.css";

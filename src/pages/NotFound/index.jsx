@@ -1,10 +1,11 @@
+import Layout from "../Layout"
 
 function NotFound() {
   return (
     <>
-      <div className='title'>
-           NotFound
-      </div>
+      <Layout>
+        NotFound
+      </Layout>
     </>
   )
 }
