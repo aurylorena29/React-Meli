@@ -1,11 +1,19 @@
+import { useNavigate } from "react-router-dom"
 import Layout from "../../pages/Layout"
-import './card.scss';
+import './card.scss'
 
-function Card({ image, price, description, condition }) {
+function Card({ image, price, description, condition, id }) {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+      navigate(`/items/${id}`); 
+    };
+
   return (
     <>
       <Layout>
-        <div className="card">
+        <div className="card" onClick={handleClick} style={{ cursor: 'pointer' }}>
           <div className="card__image">
             <img src={image} alt={description} />
           </div>

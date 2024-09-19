@@ -1,10 +1,11 @@
-import { useRoutes, BrowserRouter as Router} from 'react-router-dom'
+import { useRoutes, BrowserRouter as Router } from 'react-router-dom'
+import { SearchContextProvider } from '../../context'
 import Home from '../Home'
 import Detail from '../Detail'
 import SearchResults from '../SearchResults'
-import NotFound from '../NotFound';
+import NotFound from '../NotFound'
 import '../../app.scss'
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Navbar'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -34,10 +35,12 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar />
-        <AppRoutes />
-      </Router>
+      <SearchContextProvider>
+        <Router>
+          <Navbar />
+          <AppRoutes />
+        </Router>
+      </SearchContextProvider>
     </>
   )
 }

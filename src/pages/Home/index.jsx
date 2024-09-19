@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import Layout from "../Layout";
-import Card from "../../components/Card";
+import { useState, useEffect } from "react"
+import Layout from "../Layout"
+import Card from "../../components/Card"
 
 function Home() {
   const [items, setItems] = useState([]); 
@@ -18,7 +18,7 @@ function Home() {
     <>
       <Layout>
         {
-          items.map((item) => (
+          items?.map((item) => (
             <Card
               key={item.id}
               image={item.thumbnail}

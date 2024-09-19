@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import '../../app.scss';
-import './navbar.scss';
-
+import React, { useContext } from "react"
+import { useNavigate } from "react-router-dom"
+import { SearchContext } from '../../context'
+import '../../app.scss'
+import './navbar.scss'
 
 const Navbar = () => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const { searchTerm, setSearchTerm } = useContext(SearchContext); 
     const navigate = useNavigate();
 
-    console.log(searchTerm);
-
-    const handleSearch = (e) => {
-        e.preventDefault();
+    const handleSearch = (event) => {
+        event.preventDefault();
         if (searchTerm.trim()) {
             navigate(`/items?search=${searchTerm}`);
         }
@@ -26,15 +24,11 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="navbar__search">
-                    <form onSubmit={handleSearch}
-                    >
+                    <form onSubmit={handleSearch}>
                         <input
                             type="text"
-                            value={searchTerm}
-                            onChange={(e) => {
-                                setSearchTerm(e.target.value)
-                                console.log(setSearchTerm);
-                            }}
+                            value={searchTerm} 
+                            onChange={(event) => setSearchTerm(event.target.value)} 
                             placeholder="Buscar productos, marcas y más..."
                         />
                         <button type="submit">🔍</button>
