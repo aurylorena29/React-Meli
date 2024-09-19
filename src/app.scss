@@ -8,3 +8,8 @@
 
 // Bootstrap grid CSS 
 @import "./scss/base/bootstrap-grid.min.css";
+
+
+body{
+    background-color: var.$color-gray-light;
+}

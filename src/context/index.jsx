@@ -12,6 +12,7 @@ export const SearchContextProvider = ({ children }) => {
     );
     setFilteredProducts(filtered.slice(0, 4)); 
   };
+  
 
   return (
     <SearchContext.Provider value={{ searchTerm, setSearchTerm, filteredProducts, updateSearchResults }}>

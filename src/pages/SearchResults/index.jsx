@@ -1,33 +1,31 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { SearchContext } from '../../context'
+import { useFetch } from '../../hooks/useFetch'
 import Layout from '../Layout'
-import { SearchContext } from '../../context' 
 import Card from '../../components/Card'
 
-function SearchResults () {
-  const { searchTerm, filteredProducts, updateSearchResults } = useContext(SearchContext);
+function SearchResults() {
+  const { searchTerm, updateSearchResults, filteredProducts } = useContext(SearchContext);
   const [searchParams] = useSearchParams();
-  const query = searchParams.get('search'); 
-  const [items, setItems] = useState([]); 
+  const query = searchParams.get('search') || searchTerm;
+
+  const { data: items, loading, error } = useFetch(`http://localhost:3001/api/items?search=${query}`);
 
   useEffect(() => {
-    if (query) {
-      fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`)
-        .then(response => response.json())
-        .then(data => {
-          setItems(data.results || []); 
-          updateSearchResults(data.results); 
-        })
-        .catch(error => console.error('Error fetching data:', error));
+    if (items.length) {
+      updateSearchResults(items); 
     }
-  }, [query, updateSearchResults]); 
+  }, [items]); 
 
   return (
     <Layout>
       <div>
         <h1>Resultados de la búsqueda para: {query}</h1>
+        {loading && <p>Cargando productos...</p>}
+        {error && <p>Error al cargar productos: {error}</p>}
         <div className="product-list">
-          {filteredProducts.map(product => (
+          {filteredProducts.map((product) => (
             <Card
               key={product.id}
               id={product.id}
@@ -41,6 +39,6 @@ function SearchResults () {
       </div>
     </Layout>
   );
-};
+}
 
 export default SearchResults;
