@@ -47,26 +47,26 @@ react-meli/
 
 Para iniciar el proyecto en tu entorno local, sigue estos pasos:
 
-	1.	Clonar el repositorio:
+1. Clonar el repositorio:
 
 ```bash
 git clone https://github.com/tu-usuario/react-meli.git
 cd react-meli
 ```
 
-	2.	Instalar dependencias:
+2.	Instalar dependencias:
 
 ```bash
 npm install
 ```
 
-	3.	Iniciar el servidor de desarrollo:
+3.	Iniciar el servidor de desarrollo:
 
 ```bash
 npm run dev
 ```
 
-	4.	Iniciar el servidor de Express:
+4.	Iniciar el servidor de Express:
 
 ```bash
 npm run server
@@ -76,13 +76,13 @@ npm run server
 
 El proyecto soporta varios idiomas mediante i18next y react-i18next. Las traducciones están en src/translate/ y actualmente soporta español (es) e inglés (en).
 
-	•	Configuración de i18n: src/translate/i18n.js
-	•	Traducciones: i18n-en.json y i18n-es.json
+	* Configuración de i18n: src/translate/i18n.js
+	* Traducciones: i18n-en.json y i18n-es.json
 
 ### 🎨 Estilos con SCSS
 
 Este proyecto utiliza SCSS para un manejo eficiente de los estilos. La estructura sigue una arquitectura modular con SMACSS para facilitar la mantenibilidad y escalabilidad.
 
-	•	Variables y Mixins: src/scss/abstracts/
-	•	Estilos Base: src/scss/base/
-	•	Estilos por Página: Cada página tiene sus propios estilos modulares.
+	*	Variables y Mixins: src/scss/abstracts/
+	*	Estilos Base: src/scss/base/
+	*	Estilos por Página: Cada página tiene sus propios estilos modulares.
