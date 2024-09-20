@@ -1,0 +1,12 @@
+@use '../../scss/abstracts/variables' as var;
+
+.search__title{
+    font-family: var.$font-name;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: var.$color-black-light-2;
+
+    span{
+        font-family: var.$font-medium-name;
+    }
+}

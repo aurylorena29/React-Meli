@@ -1,8 +1,9 @@
+import './layout.scss'
 
 function Layout({ children }) {
   return (
     <>
-      <div className='container'>
+      <div className="layout__container">
         {children}
       </div>
     </>

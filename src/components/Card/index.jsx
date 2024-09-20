@@ -16,7 +16,7 @@ const  Card = ({ image, price, description, condition, id }) => {
       <Layout>
         <div className={defaultClassName} onClick={handleClick} >
           <div className={`${defaultClassName}__image`}>
-            <img src={image} alt={description} />
+            <img src={image} alt={description} loading="lazy"/>
           </div>
           <div className={`${defaultClassName}__details`}>
             <p className={`${defaultClassName}__price`}>${price}</p>

@@ -4,7 +4,7 @@ import { SearchContext } from '../../context'
 import { useFetch } from '../../hooks/useFetch'
 import Layout from '../../wrapper/Layout'
 import Card from '../../components/Card'
-
+import './searchResult.scss'
 
 const SearchResults = () => {
   const { searchTerm, updateSearchResults, filteredProducts } = useContext(SearchContext);
@@ -23,11 +23,10 @@ const SearchResults = () => {
   return (
     <Layout>
     <div>
-      <h1>Resultados de la búsqueda para: {query}</h1>
+      <p className='search__title'>Resultados de la búsqueda para: <span>{query}</span></p>
       {loading && <p>Cargando productos...</p>}
       {error && <p>Error al cargar productos: {error}</p>}
       <div className="product-list">
-        
           {filteredProducts.map((product) => (
             <Card
               key={product.id}

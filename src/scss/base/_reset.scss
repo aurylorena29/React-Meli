@@ -214,6 +214,10 @@ https://serp.co/tools/css-reset/
 	padding: 0;
   }
   
+  :focus-visible{
+    outline: 0;
+  }
+
   /**
    * Restore the focus styles unset by the previous rule.
    */

@@ -19,8 +19,8 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="container navbar__block">
-                <div className=" col navbar__logo">
+            <div className="navbar__block">
+                <div className="navbar__logo">
                     <a href="/">
                         <img src="/logo_large_25years_v2.png" alt="Logo" />
                     </a>
