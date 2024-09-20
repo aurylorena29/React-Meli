@@ -12,7 +12,7 @@
     &__image {
         display: flex;
         width: 120px;
-        height: 160px;
+        height: 130px;
       img {
         width: 100%; 
         height: auto;
@@ -37,14 +37,20 @@
       }
   
       .card__description {
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: var.$color-black-light-2;
-      }
-  
-      .card__location {
-        font-size: 0.875rem;
-        color: var.$color-gray;
-        text-align: right;
+        margin: 10px 0;
       }
     }
+
+    &__condition {
+        font-size: 1rem;
+        background-color: var.$color-blue-dark;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: var.$color-white;
+        text-align: right;
+        font-family: var.$font-regular-name;
+      }
+
   }
