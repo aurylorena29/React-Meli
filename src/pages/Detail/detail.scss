@@ -14,9 +14,14 @@
     padding: 2rem;
   }
 
+  &--col{
+    flex-direction: column;
+  }
+
   &__image-container {
     flex: 2;
     max-width: 300px;
+    max-height: 500px;
     display: flex;
   }
 

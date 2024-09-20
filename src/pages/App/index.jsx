@@ -26,14 +26,13 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <>
-      <SearchContextProvider>
-        <Router>
-          <Navbar />
-          <AppRoutes />
-        </Router>
-      </SearchContextProvider>
-    </>
+    <SearchContextProvider>
+      <Router>
+        <Navbar />
+        <AppRoutes />
+      </Router>
+    </SearchContextProvider>
+
   )
 }
 
