@@ -1,10 +1,10 @@
-🛒 # React-Meli
+# React-Meli
 
 ## Prueba Técnica Mercado Libre
 
 Este proyecto es parte de una prueba técnica para Mercado Libre, diseñada para crear una aplicación web que permita a los usuarios buscar productos y visualizar los detalles de los mismos. El stack tecnológico utilizado incluye React en el frontend, Node.js con Express para el backend, y un conjunto de herramientas modernas como Vite para el desarrollo y la construcción rápida.
 
-🚀 ### Tecnologías Utilizadas
+### 🚀 Tecnologías Utilizadas
 
 Este proyecto emplea las siguientes tecnologías y herramientas:
 
@@ -17,7 +17,7 @@ Este proyecto emplea las siguientes tecnologías y herramientas:
 	•	Linting: ESLint para un código limpio y consistente
 	•	Íconos: React Icons
 
-🗂 Estructura del Proyecto
+### 🗂 Estructura del Proyecto
 
 ```bash
 react-meli/
@@ -43,36 +43,43 @@ react-meli/
 └── README.md                # Documentación del proyecto
 ```
 
-💻 ## Instalación y Uso
+### 💻 Instalación y Uso
 
 Para iniciar el proyecto en tu entorno local, sigue estos pasos:
 
 	1.	Clonar el repositorio:
+
 ```bash
 git clone https://github.com/tu-usuario/react-meli.git
 cd react-meli
 ```
+
 	2.	Instalar dependencias:
+
 ```bash
 npm install
 ```
+
 	3.	Iniciar el servidor de desarrollo:
+
 ```bash
 npm run dev
 ```
+
 	4.	Iniciar el servidor de Express:
+
 ```bash
 npm run server
 ```
 
-🌍 ## i18n: Internacionalización
+### 🌍 i18n: Internacionalización
 
 El proyecto soporta varios idiomas mediante i18next y react-i18next. Las traducciones están en src/translate/ y actualmente soporta español (es) e inglés (en).
 
 	•	Configuración de i18n: src/translate/i18n.js
 	•	Traducciones: i18n-en.json y i18n-es.json
 
-🎨 ## Estilos con SCSS
+### 🎨 Estilos con SCSS
 
 Este proyecto utiliza SCSS para un manejo eficiente de los estilos. La estructura sigue una arquitectura modular con SMACSS para facilitar la mantenibilidad y escalabilidad.
 
