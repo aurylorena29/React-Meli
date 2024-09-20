@@ -5,13 +5,15 @@ import '../../app.scss'
 import './navbar.scss'
 
 const Navbar = () => {
-    const { searchTerm, setSearchTerm } = useContext(SearchContext); 
+    const { searchTerm, setSearchTerm } = useContext(SearchContext);
     const navigate = useNavigate();
 
     const handleSearch = (event) => {
         event.preventDefault();
         if (searchTerm.trim()) {
             navigate(`/items?search=${searchTerm}`);
+        } else {
+            navigate('/*');
         }
     };
 
@@ -27,8 +29,8 @@ const Navbar = () => {
                     <form onSubmit={handleSearch}>
                         <input
                             type="text"
-                            value={searchTerm} 
-                            onChange={(event) => setSearchTerm(event.target.value)} 
+                            value={searchTerm}
+                            onChange={(event) => setSearchTerm(event.target.value)}
                             placeholder="Buscar productos, marcas y más..."
                         />
                         <button type="submit">🔍</button>

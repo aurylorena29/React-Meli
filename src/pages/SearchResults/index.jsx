@@ -1,30 +1,33 @@
 import React, { useContext, useEffect } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import { SearchContext } from '../../context'
 import { useFetch } from '../../hooks/useFetch'
-import Layout from '../Layout'
+import Layout from '../../wrapper/Layout'
 import Card from '../../components/Card'
 
-function SearchResults() {
+
+const SearchResults = () => {
   const { searchTerm, updateSearchResults, filteredProducts } = useContext(SearchContext);
   const [searchParams] = useSearchParams();
   const query = searchParams.get('search') || searchTerm;
+  const navigate = useNavigate();
 
   const { data: items, loading, error } = useFetch(`http://localhost:3001/api/items?search=${query}`);
 
   useEffect(() => {
     if (items.length) {
       updateSearchResults(items); 
-    }
+    } 
   }, [items]); 
 
   return (
     <Layout>
-      <div>
-        <h1>Resultados de la búsqueda para: {query}</h1>
-        {loading && <p>Cargando productos...</p>}
-        {error && <p>Error al cargar productos: {error}</p>}
-        <div className="product-list">
+    <div>
+      <h1>Resultados de la búsqueda para: {query}</h1>
+      {loading && <p>Cargando productos...</p>}
+      {error && <p>Error al cargar productos: {error}</p>}
+      <div className="product-list">
+        
           {filteredProducts.map((product) => (
             <Card
               key={product.id}
@@ -34,10 +37,11 @@ function SearchResults() {
               description={product.title}
               condition={product.condition}
             />
-          ))}
-        </div>
+          ))
+        }
       </div>
-    </Layout>
+    </div>
+  </Layout>
   );
 }
 

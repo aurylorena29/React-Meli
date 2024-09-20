@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom"
-import Layout from "../../pages/Layout"
+import Layout from "../../wrapper/Layout"
 import './card.scss'
 
-function Card({ image, price, description, condition, id }) {
+const  Card = ({ image, price, description, condition, id }) => {
 
     const navigate = useNavigate();
+    const defaultClassName = 'card';
 
     const handleClick = () => {
       navigate(`/items/${id}`); 
@@ -13,16 +14,16 @@ function Card({ image, price, description, condition, id }) {
   return (
     <>
       <Layout>
-        <div className="card" onClick={handleClick} style={{ cursor: 'pointer' }}>
-          <div className="card__image">
+        <div className={defaultClassName} onClick={handleClick} >
+          <div className={`${defaultClassName}__image`}>
             <img src={image} alt={description} />
           </div>
-          <div className="card__details">
-            <p className="card__price">${price}</p>
-            <p className="card__description">{description}</p>
+          <div className={`${defaultClassName}__details`}>
+            <p className={`${defaultClassName}__price`}>${price}</p>
+            <p className={`${defaultClassName}__description`}>{description}</p>
           </div>
           <div>
-            <p className="card__condition">{condition}</p>
+            <p className={`${defaultClassName}__condition`}>{condition}</p>
           </div>
         </div>
       </Layout>

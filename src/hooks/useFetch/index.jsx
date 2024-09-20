@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react"
 import { SearchContext } from "../../context" 
 
-export function useFetch(endpoint) {
+export const useFetch = (endpoint) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

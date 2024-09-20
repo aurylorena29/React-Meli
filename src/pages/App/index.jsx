@@ -1,9 +1,8 @@
 import { useRoutes, BrowserRouter as Router } from 'react-router-dom'
 import { SearchContextProvider } from '../../context'
-import Home from '../Home'
+import { Navigate } from 'react-router-dom'
 import Detail from '../Detail'
 import SearchResults from '../SearchResults'
-import NotFound from '../NotFound'
 import '../../app.scss'
 import Navbar from '../../components/Navbar'
 
@@ -11,7 +10,7 @@ const AppRoutes = () => {
   let routes = useRoutes([
     {
       path: '/',
-      element: <Home />
+      element: <Navigate to="/" />
     },
     {
       path: '/items',
@@ -20,19 +19,12 @@ const AppRoutes = () => {
     {
       path: '/items/:id',
       element: <Detail />
-    },
-    {
-      path: '/*',
-      element: <NotFound />
     }
   ]);
-
   return routes;
 };
 
 function App() {
-
-
   return (
     <>
       <SearchContextProvider>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFetch } from '../../hooks/useFetch'
 import { useParams } from 'react-router-dom'
-import Layout from '../Layout'
+import Layout from '../../wrapper/Layout'
 import Button from '../../components/Button'
 import './detail.scss'
 
